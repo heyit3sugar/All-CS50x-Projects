@@ -1,0 +1,44 @@
+/* Background color for the body */
+body {
+	background-color: #f8f9fa;
+}
+
+/* Style for the navbar */
+.navbar {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+	font-weight: bold;
+	color: #007bff;
+}
+
+.nav-link {
+	color: #495057;
+}
+
+/* Style for the container */
+.container {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	margin-top: 2rem;
+}
+
+/* Style for the image */
+.img-fluid {
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the headings */
+h1, h2, h3, h4, h5, h6 {
+	color: #495057;
+}
+
+/* Style for the paragraphs */
+p {
+	line-height: 1.5;
+	color: #6c757d;
+}

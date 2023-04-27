@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkMultipleChoiceAnswer(answer) {
+                var correctAnswer = 2; // Assuming correct answer is option 3 (index 2)
+                var buttons = document.getElementsByClassName("mc-button");
+                for (var i = 0; i < buttons.length; i++) {
+                    if (i === correctAnswer) {
+                        buttons[i].style.backgroundColor = "green";
+                        buttons[i].innerText = "Correct!";
+                    } else {
+                        buttons[i].style.backgroundColor = "red";
+                        buttons[i].innerText = "Incorrect";
+                    }
+                    buttons[i].disabled = true;
+                }
+            }
+            function checkFreeResponseAnswer() {
+            var inputField = document.getElementById("free-response-input");
+            var answer = inputField.value;
+            var correctAnswer = "elephant"; // Assuming correct answer is "elephant"
+            if (answer.toLowerCase() === correctAnswer.toLowerCase()) {
+                inputField.style.backgroundColor = "green";
+                inputField.value = "Correct!";
+            } else {
+                inputField.style.backgroundColor = "red";
+                inputField.value = "Incorrect";
+            }
+            inputField.disabled = true;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+                <h3>What is the capital of France?</h3>
+                <button class="mc-button" onclick="checkMultipleChoiceAnswer(0)">A. London</button>
+                <button class="mc-button" onclick="checkMultipleChoiceAnswer(1)">B. Berlin</button>
+                <button class="mc-button" onclick="checkMultipleChoiceAnswer(2)">C. Paris</button>
+                <button class="mc-button" onclick="checkMultipleChoiceAnswer(3)">D. Rome</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the largest land animal?</h3>
+                <input type="text" id="free-response-input">
+                <button onclick="checkFreeResponseAnswer()">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>
